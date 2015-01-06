@@ -59,15 +59,15 @@ manually restore the initrd file.
 
 FAQ
 ---
-1. Why binaries are not included?
+1. Why binaries are not included?  
 Because of the GPL - binaries MUST be shipped with their source, license etc.
-2. Why payloads are not included?
+2. Why payloads are not included?  
 Payloads are either customisable or licensed. Instead of that there are provided detailed instructions
-3. Why only Ubuntu 14.04 x86_64 is supported?
+3. Why only Ubuntu 14.04 x86_64 is supported?  
 This is merely a Proof-of-concept. It was created to be extensible, but so far It was not tested on other distros.
 However, you can prepare your custom system, just watch at the code and copy the code
-4. Which system should be installed on pendrive?
+4. Which system should be installed on pendrive?  
 Ideally - identical to the victim's one. Because of the ease of gathering binaries. But it really is not important, 
 as long as you do have a possibility in that system to mount and use lvm.
-5. Why the bash scripting is inconsistent and lame?
+5. Why the bash scripting is inconsistent and lame?  
 I am not the Bash ninja and this is merely a proof of concept. It may be improved and rewritten and maybe it should be. 
